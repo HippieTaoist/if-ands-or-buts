@@ -13,4 +13,11 @@ const numPinCode = Number(pinCode)
 const prompt = require('prompt-sync')();
 const userAttempt = prompt('What do you think the numerical pin is?   ');
 
-const numUserAttempt = Number(userAttempt)
+const numUserAttempt = Number(userAttempt);
+
+if (numPinCode === numUserAttempt) {
+    console.log('Success! ',
+        numUserAttempt, ' is correct! You may now unlock your box.')
+} else {
+    console.log('Failure ', numUserAttempt, ' is the incorrect pin code. you have 0 chances left to get it right. Good Bye.')
+}
